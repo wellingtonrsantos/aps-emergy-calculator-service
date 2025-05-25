@@ -1,0 +1,8 @@
+from enum import Enum
+
+
+class SustainabilityClassification(str, Enum):
+    HIGHLY_SUSTAINABLE = "HIGHLY_SUSTAINABLE"
+    SUSTAINABLE = "SUSTAINABLE"
+    LOW_SUSTAINABILITY = "LOW_SUSTAINABILITY"
+    UNSUSTAINABLE = "UNSUSTAINABLE"
