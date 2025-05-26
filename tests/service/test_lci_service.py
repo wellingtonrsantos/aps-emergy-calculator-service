@@ -8,8 +8,8 @@ from app.exceptions.exceptions import LCIServiceException
 
 def test_list_products_success():
     fake_products = [
-        {"id": 1, "name": "Produto A"},
-        {"id": 2, "name": "Produto B"},
+        {"id": 1, "name": "Produto A", "description": "Descricao A"},
+        {"id": 2, "name": "Produto B", "description": "Descricao B"},
     ]
     with patch("app.service.lci_service.requests.get") as mock_get:
         mock_response = MagicMock()

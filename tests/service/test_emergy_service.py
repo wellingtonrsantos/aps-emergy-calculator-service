@@ -125,7 +125,7 @@ def test_calculate_sustainability_indicators_valid(valid_input_dataframe):
     assert result["EYR"] == 4.0
     assert result["ELR"] == 3.0
     assert result["ESI"] == 1.33
-    assert result["classification"] == "Sustentável"
+    assert result["classification"] == "SUSTAINABLE"
 
 
 def test_sustainability_indicators_with_zero_R_raises(
@@ -171,4 +171,4 @@ def test_classification_of_ESI_correctly_returns_category(valid_input_dataframe)
     result = service._calculate_sustainability_indicators(emergy_totals)
 
     assert result["ESI"] > 10
-    assert result["classification"] == "Altamente Sustentável"
+    assert result["classification"] == "HIGHLY_SUSTAINABLE"

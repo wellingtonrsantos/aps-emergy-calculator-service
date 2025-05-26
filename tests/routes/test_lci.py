@@ -16,8 +16,8 @@ app.dependency_overrides[auth.get_current_user] = override_get_current_user
 
 def test_list_lci_products_success():
     fake_products = [
-        {"id": 1, "name": "Produto A"},
-        {"id": 2, "name": "Produto B"},
+        {"id": 1, "name": "Produto A", "description": "Descricao A"},
+        {"id": 2, "name": "Produto B", "description": "Descricao B"},
     ]
     with patch("app.service.lci_service.requests.get") as mock_get:
         mock_response = MagicMock()
